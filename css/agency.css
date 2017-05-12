@@ -227,6 +227,8 @@ fieldset[disabled] .btn-xl.active {
   .navbar-custom.affix .intro-logo {
     height: 50px;
     width: 50px;
+    -webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s, height 1s;
   }
 }
 header {
