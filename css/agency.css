@@ -8,7 +8,7 @@ body {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .text-muted {
-  color: #777777;
+  color: #222222;
 }
 .text-primary {
   color: #71a028;
@@ -224,15 +224,15 @@ fieldset[disabled] .btn-xl.active {
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
-  .navbar-custom.affix .intro-logo {
+  .navbar-custom.affix .menu-logo {
     height: 50px;
     width: 50px;
-    -webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
-    transition: width 1s, height 1s;
+    -webkit-transition: width 0.2s, height 0.2s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.2s, height 0.2s;
   }
 }
 header {
-  background-image: url('../img/banner-1.jpg');
+  background-image: url('../img/test3.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -270,7 +270,7 @@ header .intro-text .intro-heading {
   header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 40px;
     margin-bottom: 25px;
   }
@@ -283,14 +283,21 @@ header .intro-text .intro-heading {
     margin-bottom: 50px;
   }
 }
+.menu-logo {
+  height: 0px;
+  width: 0px;
+  -webkit-transition: width 0.2s, height 0.2s; /* For Safari 3.1 to 6.0 */
+  transition: width 0.2s, height 0.2s;
+}
 .intro-logo {
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
 }
 section {
   padding: 100px 0;
 }
 section h2.section-heading {
+  color: white;
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
@@ -303,13 +310,25 @@ section h3.section-subheading {
   font-weight: 400;
   margin-bottom: 75px;
 }
+
+section p.section-subheading {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
+  line-height: 200%;
+}
+
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    padding: 100px 0;
   }
 }
 .service-heading {
   margin: 15px 0;
+  color: white;
   text-transform: none;
 }
 #portfolio .portfolio-item {
@@ -754,3 +773,63 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #71a028;
 }
+
+  /* Mes modifications */
+.services-raw {
+  background:#71a028;
+}
+
+#ServiceRecherche {
+   background-image: url('../img/services/icon_rechercheOFF.png');
+}
+#ServiceRecherche:hover {
+   background-image: url('../img/services/icon_rechercheON.png');
+}
+#ServiceRedaction {
+   background-image: url('../img/services/icon_redactionOFF.png');
+}
+#ServiceRedaction:hover {
+   background-image: url('../img/services/icon_redactionON.png');
+}
+#ServiceEducation {
+   background-image: url('../img/services/icon_educationOFF.png');
+}
+#ServiceEducation:hover {
+   background-image: url('../img/services/icon_educationON.png');
+}
+#ServiceTherapie {
+   background-image: url('../img/services/icon_therapieON.png');
+}
+#ServiceTherapie:hover {
+   background-image: url('../img/services/icon_therapieOFF.png');
+}
+#ServiceBienetre {
+   background-image: url('../img/services/icon_bienetreOFF.png');
+}
+#ServiceBienetre:hover {
+   background-image: url('../img/services/icon_bienetreON.png');
+}
+#ServiceRehabilitation {
+   background-image: url('../img/services/icon_rehabilitationON.png');
+}
+#ServiceRehabilitation:hover {
+   background-image: url('../img/services/icon_rehabilitationOFF.png');
+}
+#ServiceEnclos {
+   background-image: url('../img/services/icon_enclosOFF.png');
+}
+#ServiceEnclos:hover {
+   background-image: url('../img/services/icon_enclosON.png');
+}
+
+.service-icon-settings {
+  background-size: 112px 112px;
+  background-repeat: no-repeat;
+  height: 112px;
+  width: 112px;
+}
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
