@@ -24,6 +24,9 @@
     <!-- Theme CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logos/ethope_favicon.png" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -97,9 +100,9 @@
         <div class="container">
             <div class="row">
               <div class="col-md-12 text-center">
-                  <h2 style="color:black;" class="section-heading">Notre cabinet d'expertise</h2>
+                  <h1 style="color:black;" class="section-heading">Éthope, Cabinet d'expertise</h1>
                   <p>&nbsp;</p>
-                  <p class="section-subheading text-muted">Situé à Montréal (Canada), Éthope est un cabinet mettant à votre service son expertise et savoir-faire dans vos projets ayant attrait au comportement et bien-être animal. Son nom provient de l’éthologie, une branche de la biologie, qui s’intéresse à l’étude du comportement des espèces animales. Notre but est de faire connaître cette science et ainsi permettre à l’homme d’exprimer son plein potentiel dans sa relation avec l’animal. Mieux connaître l’animal permet de mieux répondre à ses besoins et ainsi améliorer ses conditions de vie et son bien-être.</p>
+                  <p class="section-subheading text-muted">Situé à Montréal, Éthope est un cabinet mettant à votre service son expertise et savoir-faire dans vos projets ayant attrait au comportement et bien-être animal. Son nom provient de l’éthologie, une branche de la biologie, qui s’intéresse à l’étude du comportement des espèces animales. Notre but est de faire connaître cette science et ainsi permettre à l’homme d’exprimer son plein potentiel dans sa relation avec l’animal. Mieux connaître l’animal permet de mieux répondre à ses besoins et ainsi améliorer ses conditions de vie et son bien-être.</p>
               </div>
             </div>
         </div>
@@ -118,34 +121,34 @@
                 <div class="col-md-4">
                     <div id="ServiceRecherche" class="aligncenter service-icon-settings"></div>
                     <h4 class="service-heading">RECHERCHE</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted margeservices">Éthope accompagne les laboratoires, universités, parcs zoologiques, refuges ou encore cliniques vétérinaires dans leurs projets de recherche en éthologie fondamentale et appliquée.</p>
                 </div>
                 <div class="col-md-4">
                     <div id="ServiceRedaction" class="aligncenter service-icon-settings"></div>
                     <h4 class="service-heading">RÉDACTION</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted margeservices"></p>
                 </div>
                 <div class="col-md-4">
                     <div id="ServiceEducation" class="aligncenter service-icon-settings"></div>
                     <h4 class="service-heading">ÉDUCATION</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted margeservices">En fonction de vos besoins, que vous soyez professionnels, étudiants ou tout simplement curieux, Éthope vous propose des formations, ateliers et conférences sur mesure autour de l’éthologie et du bien-être animal.</p>
                 </div>
             </div>
             <div class="row text-center" style="padding-bottom:20px">
                 <div class="col-md-4">
                     <div id="ServiceTherapie" class="aligncenter service-icon-settings"></div>
                     <h4 class="service-heading">THÉRAPIE COMPORTEMENTALE</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted margeservices">Éthope vous propose de l’aide face aux difficultés que vous pouvez rencontrer avec votre compagnon à quatre pattes. En fonction de la problématique, un programme d’entrainement et de formation adapté vous sera proposé.</p>
                 </div>
                 <div class="col-md-4">
                     <div id="ServiceBienetre" class="aligncenter service-icon-settings"></div>
                     <h4 class="service-heading">BIEN-ÊTRE ANIMAL</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted margeservices">Éthope met à votre service ses compétences en matière d’amélioration des conditions de vie des animaux au sein des familles, cliniques vétérinaires, refuges, laboratoires ou encore des parcs zoologiques.</p>
                 </div>
                 <div class="col-md-4">
                     <div id="ServiceRehabilitation" class="aligncenter service-icon-settings"></div>
                     <h4 class="service-heading">RÉHABILITATION</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted margeservices">Éthope vous accompagne dans vos projets de ré-habilitation et/ou de ré-introduction d’espèces (mise en place de protocoles rigoureux de mise en contact et de suivi comportemental pour la réussite du processus de réhabilitation).</p>
                 </div>
             </div>
             <!--<div class="row text-center">
@@ -457,13 +460,26 @@
                 <div class="col-lg-12">
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-3">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Votre nom *" id="name" required data-validation-required-message="Please enter your name.">
+                                  <select name="services" class="form-control" id="services">
+                                    <option selected="selected">Quel service ?</option>
+                                    <option value="recherche">Recherche</option>
+                                    <option value="redaction">Rédaction</option>
+                                    <option value="education">Éducation</option>
+                                    <option value="therapie_comportemental">Thérapie Comportementale</option>
+                                    <option value="bienetre_animal">Bien-Être animal</option>
+                                    <option value="rehabilitation">Réhabilitation</option>
+                                    <option value="autre_sujet">Autres Questions</option>
+                                  </select>
+                                  <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Votre nom *" id="name" required data-validation-required-message="Merci d'entrer votre nom.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Votre Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" placeholder="Votre Email *" id="email" required data-validation-required-message="Merci d'entrer votre courriel.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
@@ -471,16 +487,34 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Votre Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <input type="sujet" class="form-control"  placeholder="Votre Sujet *" id="sujet" required data-validation-required-message="Merci d'entrer votre sujet.">
                                     <p class="help-block text-danger"></p>
                                 </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Votre Message *" id="message" required data-validation-required-message="Merci d'entrer votre message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div id="googleMap" style="width:100%;height:236px;margin-top:45px"></div>
+
+                              <script>
+                                function myMap() {
+                                  var mapProp= {
+                                    center:new google.maps.LatLng(45.5106127,-73.5676309),
+                                    zoom:5,
+                                  };
+                                  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                                }
+                              </script>
+                              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWpMV44tT7uGzV4ZxJmHrPAdpbyCylX4&callback=myMap"></script>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
+                                <button type="submit" class="btn btn-xl">Envoyer le message</button>
                             </div>
                         </div>
                     </form>
@@ -493,7 +527,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <span class="copyright">Copyright &copy; Cabinet d'expertise-conseil en comportement et bien-être animal, Éthope 2017</span>
+                    <span class="copyright">Copyright &copy; 2017, Cabinet d'expertise-conseil en comportement et bien-être animal, Éthope</span>
                 </div>
 
                 <div class="col-md-4">

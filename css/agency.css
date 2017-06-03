@@ -264,7 +264,7 @@ header .intro-text .intro-heading {
 }
 @media (min-width: 768px) {
   header .intro-text {
-    padding-top: 300px;
+    padding-top: 150px;
     padding-bottom: 200px;
   }
   header .intro-text .intro-lead-in {
@@ -595,10 +595,14 @@ section#contact .form-group {
   margin-bottom: 25px;
 }
 section#contact .form-group input,
+section#contact .form-group select,
 section#contact .form-group textarea {
   padding: 20px;
 }
 section#contact .form-group input.form-control {
+  height: auto;
+}
+section#contact .form-group select.form-control {
   height: auto;
 }
 section#contact .form-group textarea.form-control {
@@ -851,7 +855,12 @@ body {
   margin-bottom: 50px;
   margin:10px;
 }
-.col-centered{
+.col-centered {
 float: none;
 margin: 0 auto;
+}
+.margeservices {
+  padding-bottom:15px;
+  padding-right:20px;
+  padding-left:20px;
 }
