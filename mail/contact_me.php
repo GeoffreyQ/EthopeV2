@@ -7,13 +7,12 @@ $sujet = strip_tags(htmlspecialchars($_POST['sujet']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 $services = strip_tags(htmlspecialchars($_POST['services']));
 
-$email_subject = 'Éthope - '.$services.' - '.$sujet.'.';
+$email_subject = 'Éthope - '.$sujet.'.';
 
 $email_body = '<p>You have received a new message from your website contact form.</p>';
 $email_body .= '<p>Name: '.$name.'</p><br />';
 $email_body .= '<p>Phone: '.$phone.'</p><br />';
 $email_body .= '<p>Email: '.$email_address.'</p><br />';
-$email_body .= '<p>Service: '.$services.'</p><br />';
 $email_body .= '<p>Sujet: '.$sujet.'</p><br />';
 $email_body .= '<p>Message: '.$message.'</p><br />';
 
