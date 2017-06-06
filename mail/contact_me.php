@@ -7,7 +7,7 @@ $sujet = strip_tags(htmlspecialchars($_POST['sujet']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 $services = strip_tags(htmlspecialchars($_POST['services']));
 
-$email_subject = 'Éthope - '.$sujet.'.';
+$email_subject = 'Ethope - '.$sujet.'.';
 
 $email_body = '<p>You have received a new message from your website contact form.</p>';
 $email_body .= '<p>Name: '.$name.'</p><br />';
@@ -35,9 +35,9 @@ date_default_timezone_set('Etc/UTC');
     $mail->IsHTML(true);
     $mail->Subject = $email_subject;
     $mail->Body = $email_body;
-    $mail->setFrom('noreply@ethope.ca', 'Éthope');
-    $mail->addReplyTo('noreply1@ethope.ca', 'Éthope1');
-    $mail->AddAddress('mylene.quervel-chaumette@ethope.ca', 'Moi');
+    $mail->setFrom('noreply@ethope.ca', 'Ethope');
+    $mail->addReplyTo('noreply1@ethope.ca', 'Ethope');
+    $mail->AddAddress('mylene.quervel-chaumette@ethope.ca', 'Ethope');
 
     if(!$mail->Send()) {
       echo "Mailer Error: " . $mail->ErrorInfo;
