@@ -1,28 +1,50 @@
 <?php
-// Check for empty fields
-if(empty($_POST['name'])      ||
-   empty($_POST['email'])     ||
-   empty($_POST['message'])   ||
-   empty($_POST['sujet'])   ||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-   echo "No arguments Provided!";
-   return false;
-   }
 
 $name = strip_tags(htmlspecialchars($_POST['name']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
-$service = strip_tags(htmlspecialchars($_POST['services']));
 $sujet = strip_tags(htmlspecialchars($_POST['sujet']));
+$message = strip_tags(htmlspecialchars($_POST['message']));
+$services = strip_tags(htmlspecialchars($_POST['services']));
 
-// Create the email and send the message
-$to = 'mylene.quervel-chaumette@ethope.ca'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Éthope - $service - $sujet";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nSujet: $sujet\n\nMessage:\n$message";
-$headers = "From: noreply@ethope.ca\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";
-mail($to,$email_subject,$email_body,$headers);
-return true;
+$email_subject = 'Éthope - '.$services.' - '.$sujet.'.';
+
+$email_body = '<p>You have received a new message from your website contact form.</p>';
+$email_body .= '<p>Name: '.$name.'</p><br />';
+$email_body .= '<p>Phone: '.$phone.'</p><br />';
+$email_body .= '<p>Email: '.$email_address.'</p><br />';
+$email_body .= '<p>Service: '.$services.'</p><br />';
+$email_body .= '<p>Sujet: '.$sujet.'</p><br />';
+$email_body .= '<p>Message: '.$message.'</p><br />';
+
+date_default_timezone_set('Etc/UTC');
+
+    require '../PHPMailerAutoload.php';
+
+    $mail = new PHPMailer();
+
+    $mail->IsSMTP();                        //Enable SMTP debugging
+    $mail->SMTPDebug  = 1;                    // 0 = off (for production use)
+    $mail->Debugoutput = 'html';            // 1 = client messages
+    $mail->Host       = 'smtp.gmail.com';    // 2 = client and server messages
+    $mail->Port       = 465;    // ou 465
+    $mail->SMTPSecure = 'ssl';
+    $mail->SMTPAuth   = true;
+    $mail->Username = "mylene.chaumette@gmail.com";
+    $mail->Password = "180987";
+
+    $mail->IsHTML(true);
+    $mail->Subject = $email_subject;
+    $mail->Body = $email_body;
+    $mail->setFrom('noreply@ethope.ca', 'Éthope');
+    $mail->addReplyTo('noreply1@ethope.ca', 'Éthope1');
+    $mail->AddAddress('mylene.quervel-chaumette@ethope.ca', 'Moi');
+
+    if(!$mail->Send()) {
+      echo "Mailer Error: " . $mail->ErrorInfo;
+    }
+    else {
+      echo "Message sent!";
+    }
+
 ?>
