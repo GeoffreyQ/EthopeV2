@@ -35,9 +35,9 @@ date_default_timezone_set('Etc/UTC');
     $mail->IsHTML(true);
     $mail->Subject = $email_subject;
     $mail->Body = $email_body;
-    $mail->setFrom('noreply@ethope.ca', 'Ethope');
+    $mail->setFrom('noreply@ethope.ca', 'Ethope - Site Contact');
     $mail->addReplyTo($email_address, $name);
-    $mail->AddAddress('mylene.quervel-chaumette@ethope.ca', 'Ethope');
+    $mail->AddAddress('mylene.quervel-chaumette@ethope.ca', 'Mylène Quervel-Chaumette');
 
     if(!$mail->Send()) {
       echo "Mailer Error: " . $mail->ErrorInfo;
