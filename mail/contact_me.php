@@ -36,7 +36,7 @@ date_default_timezone_set('Etc/UTC');
     $mail->Subject = $email_subject;
     $mail->Body = $email_body;
     $mail->setFrom('noreply@ethope.ca', 'Ethope');
-    $mail->addReplyTo('noreply1@ethope.ca', 'Ethope');
+    $mail->addReplyTo($email_address, $name);
     $mail->AddAddress('mylene.quervel-chaumette@ethope.ca', 'Ethope');
 
     if(!$mail->Send()) {
